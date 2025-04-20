@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".profilesupervisor">
+
+    <ImageView
+        android:id="@+id/imageView23"
+        android:layout_width="594dp"
+        android:layout_height="247dp"
+        app:srcCompat="@android:drawable/dialog_holo_light_frame"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-113dp"
+        tools:layout_editor_absoluteY="605dp" />
+
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="715dp"
+        android:layout_height="600dp"
+        app:srcCompat="@drawable/hhhh"
+        tools:layout_editor_absoluteX="-104dp"
+        tools:layout_editor_absoluteY="149dp"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView22"
+        android:layout_width="594dp"
+        android:layout_height="247dp"
+        app:srcCompat="@android:drawable/dialog_holo_light_frame"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-113dp"
+        tools:layout_editor_absoluteY="605dp" />
+
+    <ImageView
+        android:id="@+id/imageView39"
+        android:layout_width="71dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="4dp"
+        android:onClick="profile"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.797"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.903"
+        app:srcCompat="@drawable/he"
+        tools:ignore="MissingConstraints,OnClick" />
+
+    <ImageView
+        android:id="@+id/imageView37"
+        android:layout_width="74dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginBottom="4dp"
+        android:onClick="home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.965"
+        app:srcCompat="@drawable/home"
+        tools:ignore="MissingConstraints,OnClick" />
+
+    <ImageView
+        android:id="@+id/imageView18"
+        android:layout_width="100dp"
+        android:layout_height="119dp"
+        app:srcCompat="@drawable/she"
+        tools:layout_editor_absoluteX="295dp"
+        tools:layout_editor_absoluteY="81dp"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="84dp"
+        android:layout_height="74dp"
+        app:srcCompat="@drawable/imag_login"
+        tools:layout_editor_absoluteX="163dp"
+        tools:layout_editor_absoluteY="44dp"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="253dp"
+        android:layout_height="64dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="ID : M351EE"
+        android:textColor="@color/white"
+        tools:layout_editor_absoluteX="18dp"
+        tools:layout_editor_absoluteY="171dp"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/editTextTextPassword2"
+        android:layout_width="253dp"
+        android:layout_height="62dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:text="1234567"
+        android:textColor="@color/white"
+        tools:layout_editor_absoluteX="18dp"
+        tools:layout_editor_absoluteY="264dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button14"
+        android:layout_width="375dp"
+        android:layout_height="80dp"
+        android:backgroundTint="@color/white"
+        android:onClick="employee"
+        android:text="@string/sowh_all_employee"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.635"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button15"
+        android:layout_width="377dp"
+        android:layout_height="77dp"
+        android:backgroundTint="@color/white"
+        android:text="@string/logout"
+        android:onClick="logout"
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="18dp"
+        tools:layout_editor_absoluteY="521dp"
+        tools:ignore="MissingConstraints" />
+
+    <Switch
+        android:id="@+id/switchNotify"
+        android:layout_width="373dp"
+        android:layout_height="79dp"
+        android:text="@string/notifications"
+        android:onClick="notification"
+        android:textColor="@color/white"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="326dp"
+        tools:ignore="MissingConstraints,UseSwitchCompatOrMaterialXml" />
+
+    <TextView
+        android:id="@+id/textpasswordsupr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password:"
+        android:textColor="@color/white"
+        tools:layout_editor_absoluteX="18dp"
+        tools:layout_editor_absoluteY="245dp"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

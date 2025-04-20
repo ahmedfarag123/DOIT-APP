@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity4"
+    android:background="#002D62">
+
+
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/logo"
+        tools:ignore="ContentDescription" />
+
+
+
+    <Button
+        android:id="@+id/employeeButton"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#FFFFFF"
+        android:text="Employee"
+        android:textColor="#002D62"
+        android:textStyle="bold" />
+
+
+    <Button
+        android:id="@+id/supervisorButton"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/employeeButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#FFFFFF"
+        android:text="Supervisor"
+        android:textColor="#002D62"
+        android:textStyle="bold" />
+    <LinearLayout
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="#FFFFFF"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/icon_setting"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/baseline_settings_24"
+            tools:ignore="ContentDescription" />
+        <ImageView
+            android:id="@+id/icon_home"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/baseline_home_24"
+            tools:ignore="ContentDescription" />
+        <ImageView
+            android:id="@+id/icon_sign"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/baseline_person_24"
+            tools:ignore="ContentDescription" />
+
+
+
+
+
+    </LinearLayout>
+</RelativeLayout>

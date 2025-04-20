@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "856498537637",
+    "firebase_url": "https://do-it-d4171-default-rtdb.firebaseio.com",
+    "project_id": "do-it-d4171",
+    "storage_bucket": "do-it-d4171.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:856498537637:android:c1a76c96da2c3bb252f94c",
+        "android_client_info": {
+          "package_name": "com.example.doit1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_WsTwE1FnNCbejXY8DlXKLPuSVnvXHK4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

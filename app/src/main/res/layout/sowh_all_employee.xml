@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srcCompat="@drawable/hhhh"
+        />
+
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView32"-->
+<!--        android:layout_width="594dp"-->
+<!--        android:layout_height="247dp"-->
+<!--        app:srcCompat="@android:drawable/dialog_holo_light_frame"-->
+<!--        tools:ignore="MissingConstraints"-->
+<!--        tools:layout_editor_absoluteX="-113dp"-->
+<!--        tools:layout_editor_absoluteY="605dp" />-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:scrollbars="vertical"
+        android:layout_marginTop="180dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@+id/profileImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+
+        />
+
+    <ImageView
+        android:id="@+id/imageView41"
+        android:layout_width="74dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.965"
+        app:srcCompat="@drawable/home"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView38"
+        android:layout_width="71dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.817"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.903"
+        app:srcCompat="@drawable/he"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="42dp"
+        android:layout_height="40dp"
+        android:background="#747679"
+        android:onClick="addbutton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.921"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.128"
+        app:srcCompat="@android:drawable/ic_menu_add" />
+
+    <ImageView
+        android:id="@+id/profileImage"
+        android:layout_width="73dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.135"
+        app:srcCompat="@drawable/imag_login" />
+
+    <TextView
+        android:id="@+id/textallemployee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sowh All Employee"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:background="@drawable/task"
+        android:paddingHorizontal="80dp"
+        android:paddingVertical="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/profileImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+<!--    <Button-->
+<!--        android:id="@+id/button4"-->
+<!--        android:layout_width="354dp"-->
+<!--        android:layout_height="79dp"-->
+<!--        android:backgroundTint="@color/white"-->
+<!--        android:onClick="nameuora"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.543"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.271" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/button5"-->
+<!--        android:layout_width="356dp"-->
+<!--        android:layout_height="75dp"-->
+<!--        android:backgroundTint="@color/white"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.563"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/imageView"-->
+<!--        app:layout_constraintVertical_bias="0.186" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/button10"-->
+<!--        android:layout_width="358dp"-->
+<!--        android:layout_height="82dp"-->
+<!--        android:backgroundTint="@color/white"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.584"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/imageView"-->
+<!--        app:layout_constraintVertical_bias="0.342" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/button11"-->
+<!--        android:layout_width="355dp"-->
+<!--        android:layout_height="79dp"-->
+<!--        android:backgroundTint="@color/white"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/imageView"-->
+<!--        app:layout_constraintVertical_bias="0.51" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/button12"-->
+<!--        android:layout_width="354dp"-->
+<!--        android:layout_height="82dp"-->
+<!--        android:backgroundTint="@color/white"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.473"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/button4"-->
+<!--        app:layout_constraintVertical_bias="0.843" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/button13"-->
+<!--        android:layout_width="353dp"-->
+<!--        android:layout_height="84dp"-->
+<!--        android:backgroundTint="@color/white"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/imageView"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.482"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/imageView"-->
+<!--        app:layout_constraintVertical_bias="0.635" />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/imagenuora"-->
+<!--        android:layout_width="46dp"-->
+<!--        android:layout_height="59dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/button4"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/button4"-->
+<!--        app:layout_constraintHorizontal_bias="0.103"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/button4"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/button4"-->
+<!--        app:layout_constraintVertical_bias="0.3"-->
+<!--        app:srcCompat="@drawable/imagfem" />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/imagekhadija"-->
+<!--        android:layout_width="46dp"-->
+<!--        android:layout_height="59dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/button11"-->
+<!--        app:layout_constraintHorizontal_bias="0.113"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/button11"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/button4"-->
+<!--        app:layout_constraintVertical_bias="0.498"-->
+<!--        app:srcCompat="@drawable/imagfem" />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/imagemariam"-->
+<!--        android:layout_width="46dp"-->
+<!--        android:layout_height="57dp"-->
+<!--        android:layout_marginTop="84dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/button5"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/button5"-->
+<!--        app:layout_constraintHorizontal_bias="0.103"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/button5"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/button4"-->
+<!--        app:layout_constraintVertical_bias="0.0"-->
+<!--        app:srcCompat="@drawable/imagfemii" />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/imagesafa"-->
+<!--        android:layout_width="46dp"-->
+<!--        android:layout_height="57dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/button13"-->
+<!--        app:layout_constraintHorizontal_bias="0.114"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/button13"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/button4"-->
+<!--        app:layout_constraintVertical_bias="0.663"-->
+<!--        app:srcCompat="@drawable/imagfemii" />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/imagezainab"-->
+<!--        android:layout_width="46dp"-->
+<!--        android:layout_height="59dp"-->
+<!--        android:layout_marginTop="81dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/button10"-->
+<!--        app:layout_constraintHorizontal_bias="0.102"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/button10"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/button5"-->
+<!--        app:layout_constraintVertical_bias="0.0"-->
+<!--        app:srcCompat="@drawable/imagfemm" />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView20"-->
+<!--        android:layout_width="47dp"-->
+<!--        android:layout_height="57dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.173"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.869"-->
+<!--        app:srcCompat="@drawable/imagfeminn" />-->
+
+<!--    <ImageButton android:id="@+id/imageButton3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:onClick="noura" app:layout_constraintEnd_toEndOf="@+id/button4" app:layout_constraintHorizontal_bias="0.895" app:layout_constraintStart_toStartOf="@+id/button4" app:srcCompat="@android:drawable/ic_menu_delete" tools:layout_editor_absoluteY="191dp" tools:ignore="MissingConstraints" />-->
+
+<!--    <ImageButton-->
+<!--        android:id="@+id/imageButton4"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:onClick="mariam"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/button5"-->
+<!--        app:layout_constraintHorizontal_bias="0.893"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/button5"-->
+<!--        app:srcCompat="@android:drawable/ic_menu_delete"-->
+<!--        tools:layout_editor_absoluteY="269dp"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+<!--    <ImageButton-->
+<!--        android:id="@+id/imageButton5"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:onClick="zainab"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/button10"-->
+<!--        app:layout_constraintHorizontal_bias="0.89"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/button10"-->
+<!--        app:srcCompat="@android:drawable/ic_menu_delete"-->
+<!--        tools:layout_editor_absoluteY="344dp"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+<!--    <ImageButton-->
+<!--        android:id="@+id/imageButton6"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:onClick="khadija"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/button11"-->
+<!--        app:layout_constraintHorizontal_bias="0.896"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/button11"-->
+<!--        app:srcCompat="@android:drawable/ic_menu_delete"-->
+<!--        tools:layout_editor_absoluteY="424dp"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+<!--    <ImageButton-->
+<!--        android:id="@+id/imageButton7"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:onClick="safa"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/button13"-->
+<!--        app:layout_constraintHorizontal_bias="0.895"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/button13"-->
+<!--        app:srcCompat="@android:drawable/ic_menu_delete"-->
+<!--        tools:layout_editor_absoluteY="507dp"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+<!--    <ImageButton-->
+<!--        android:id="@+id/imageButton8"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:onClick="kawthar"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/button12"-->
+<!--        app:layout_constraintHorizontal_bias="0.892"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/button12"-->
+<!--        app:srcCompat="@android:drawable/ic_menu_delete"-->
+<!--        tools:layout_editor_absoluteY="592dp"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView7"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Name - Nuora"-->
+<!--        android:textStyle="bold"-->
+<!--        tools:layout_editor_absoluteX="133dp"-->
+<!--        tools:layout_editor_absoluteY="191dp"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textphilip"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Nmae - Mariam"-->
+<!--        android:textStyle="bold"-->
+<!--        tools:layout_editor_absoluteX="133dp"-->
+<!--        tools:layout_editor_absoluteY="269dp"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textzinabpili"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Name - Zainab"-->
+<!--        android:textStyle="bold"-->
+<!--        tools:layout_editor_absoluteX="139dp"-->
+<!--        tools:layout_editor_absoluteY="344dp"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textkhadijaindia"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Name - Khadija"-->
+<!--        android:textStyle="bold"-->
+<!--        tools:layout_editor_absoluteX="139dp"-->
+<!--        tools:layout_editor_absoluteY="424dp"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textsafa"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Name - Safa"-->
+<!--        android:textStyle="bold"-->
+<!--        tools:layout_editor_absoluteX="139dp"-->
+<!--        tools:layout_editor_absoluteY="507dp"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textkawind"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Name - Kawthar"-->
+<!--        android:textStyle="bold"-->
+<!--        tools:layout_editor_absoluteX="133dp"-->
+<!--        tools:layout_editor_absoluteY="586dp"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textcodenn"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Code ( N14 )"-->
+<!--        android:textSize="12sp"-->
+<!--        tools:layout_editor_absoluteX="133dp"-->
+<!--        tools:layout_editor_absoluteY="226dp"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textshemm"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Code ( M27 )"-->
+<!--        android:textSize="12sp"-->
+<!--        tools:layout_editor_absoluteX="133dp"-->
+<!--        tools:layout_editor_absoluteY="304dp"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/texthezz"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Code ( Z78 )"-->
+<!--        android:textSize="12sp"-->
+<!--        tools:layout_editor_absoluteX="139dp"-->
+<!--        tools:layout_editor_absoluteY="379dp"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textkikk"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Code ( K64 )"-->
+<!--        android:textSize="12sp"-->
+<!--        tools:layout_editor_absoluteX="139dp"-->
+<!--        tools:layout_editor_absoluteY="467dp"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textsphi"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Code ( S34 )"-->
+<!--        android:textSize="12sp"-->
+<!--        tools:layout_editor_absoluteX="136dp"-->
+<!--        tools:layout_editor_absoluteY="548dp"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textkawth"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Code ( K51 )"-->
+<!--        android:textSize="12sp"-->
+<!--        tools:layout_editor_absoluteX="134dp"-->
+<!--        tools:layout_editor_absoluteY="627dp"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textindia"-->
+<!--        android:layout_width="99dp"-->
+<!--        android:layout_height="13dp"-->
+<!--        android:text="Nationality - India"-->
+<!--        android:textSize="12sp"-->
+<!--        android:textStyle="bold"-->
+<!--        tools:layout_editor_absoluteX="133dp"-->
+<!--        tools:layout_editor_absoluteY="207dp"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textVindia"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Nationality - India"-->
+<!--        android:textSize="12sp"-->
+<!--        android:textStyle="bold"-->
+<!--        tools:layout_editor_absoluteX="139dp"-->
+<!--        tools:layout_editor_absoluteY="443dp"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView21"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Nationality - India"-->
+<!--        android:textSize="12sp"-->
+<!--        android:textStyle="bold"-->
+<!--        tools:layout_editor_absoluteX="133dp"-->
+<!--        tools:layout_editor_absoluteY="605dp"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textpilippine"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Nationality - philippines"-->
+<!--        android:textSize="12sp"-->
+<!--        android:textStyle="bold"-->
+<!--        tools:layout_editor_absoluteX="133dp"-->
+<!--        tools:layout_editor_absoluteY="285dp"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textnationality"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Nationality - philippines"-->
+<!--        android:textSize="12sp"-->
+<!--        android:textStyle="bold"-->
+<!--        tools:layout_editor_absoluteX="136dp"-->
+<!--        tools:layout_editor_absoluteY="526dp"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textphilipnation"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Nationality - Philippines"-->
+<!--        android:textSize="12sp"-->
+<!--        android:textStyle="bold"-->
+<!--        tools:layout_editor_absoluteX="136dp"-->
+<!--        tools:layout_editor_absoluteY="363dp"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+    <ImageButton
+        android:id="@+id/imageButton15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="109dp"
+        android:backgroundTint="#747679"
+        android:onClick="enter"
+        app:layout_constraintEnd_toStartOf="@+id/profileImage"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textallemployee"
+        app:srcCompat="?attr/actionModeCloseDrawable" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

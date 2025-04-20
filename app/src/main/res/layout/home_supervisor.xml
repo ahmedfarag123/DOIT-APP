@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".homesupervisor">
+
+
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/material_dynamic_neutral50"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.946"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.147"
+        app:srcCompat="@android:drawable/ic_menu_add" />
+
+    <ImageView
+        android:id="@+id/imageView21"
+        android:layout_width="78dp"
+        android:layout_height="71dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.151"
+        app:srcCompat="@drawable/imag_login" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="87dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView21"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/task"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-43dp" />
+
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView24"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_marginVertical="80dp"-->
+<!--        -->
+<!--        android:layout_marginTop="100dp"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/imageView21"-->
+<!--        app:srcCompat="@drawable/hhhh"-->
+<!--        tools:ignore="MissingConstraints"-->
+<!--        tools:layout_editor_absoluteX="-21dp" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/button6"-->
+<!--        android:layout_width="369dp"-->
+<!--        android:layout_height="110dp"-->
+<!--        android:backgroundTint="@color/white"-->
+<!--        android:onClick="@string/cleanbathroom"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.619"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.315" />-->
+
+
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView25"-->
+<!--        android:layout_width="589dp"-->
+<!--        android:layout_height="229dp"-->
+<!--        android:layout_marginTop="616dp"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:srcCompat="@android:drawable/dialog_holo_light_frame"-->
+<!--        tools:ignore="MissingConstraints"-->
+<!--        tools:layout_editor_absoluteX="-67dp" />-->
+
+    <ImageView
+        android:id="@+id/imageView42"
+        android:layout_width="61dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="72dp"
+        android:onClick="home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView40"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.958"
+        app:srcCompat="@drawable/home"
+        />
+
+    <ImageView
+        android:id="@+id/imageView40"
+        android:layout_width="58dp"
+        android:layout_height="43dp"
+        android:onClick="profile"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.802"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.951"
+        app:srcCompat="@drawable/he"
+        />
+
+<!--    <TextView-->
+<!--        android:id="@+id/TaskHome"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="28dp"-->
+<!--        android:text="Task"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textSize="24sp"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/imageView2"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.511"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.272" />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView26"-->
+<!--        android:layout_width="103dp"-->
+<!--        android:layout_height="89dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/button6"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/button6"-->
+<!--        app:layout_constraintHorizontal_bias="0.105"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/button6"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/button6"-->
+<!--        app:layout_constraintVertical_bias="0.38"-->
+<!--        app:srcCompat="@drawable/cealn" />-->
+
+
+<!--    <ImageButton-->
+<!--        android:id="@+id/imageButton9"-->
+<!--        android:layout_width="38dp"-->
+<!--        android:layout_height="35dp"-->
+<!--        android:onClick="@string/cleanbathroom"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/button6"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/button6"-->
+<!--        app:layout_constraintHorizontal_bias="0.419"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/button6"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/button6"-->
+<!--        app:layout_constraintVertical_bias="0.56"-->
+<!--        app:srcCompat="@android:drawable/ic_menu_delete" />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/imagechckhe"-->
+<!--        android:layout_width="36dp"-->
+<!--        android:layout_height="30dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/button6"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/button6"-->
+<!--        app:layout_constraintHorizontal_bias="0.522"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/button6"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/button6"-->
+<!--        app:layout_constraintVertical_bias="0.587"-->
+<!--        app:srcCompat="@drawable/chh"-->
+<!--        tools:ignore="DuplicateIds" />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/imagechck"-->
+<!--        android:layout_width="36dp"-->
+<!--        android:layout_height="30dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/button6"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/button6"-->
+<!--        app:layout_constraintHorizontal_bias="0.633"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/button6"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/button6"-->
+<!--        app:layout_constraintVertical_bias="0.587"-->
+<!--        app:srcCompat="@drawable/chh"-->
+<!--        tools:ignore="DuplicateIds" />-->
+
+
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView33"-->
+<!--        android:layout_width="46dp"-->
+<!--        android:layout_height="61dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/button6"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/button6"-->
+<!--        app:layout_constraintHorizontal_bias="0.786"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/button6"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/button6"-->
+<!--        app:layout_constraintVertical_bias="0.571"-->
+<!--        app:srcCompat="@drawable/imagfem" />-->
+
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/CleanBathRoome"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Clean BathRoom"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/button6"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.546"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.738" />-->
+
+
+
+    <TextView
+        android:id="@+id/homepage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Task"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.272" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:scrollbars="vertical"
+        android:background="@drawable/hhhh"
+        android:layout_marginTop="150dp"
+        android:layout_marginBottom="70dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton"
+        app:layout_constraintBottom_toTopOf="@+id/imageView42"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,14 @@
+<!-- res/drawable/green_button_bg.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Green background with rounded corners -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#4CAF50" /> <!-- Green color -->
+            <corners android:radius="16dp" />
+            <stroke android:width="2dp" android:color="#4CAF50" /> <!-- Outer green stroke -->
+        </shape>
+    </item>
+
+    <!-- Padding for the icon -->
+    <item android:drawable="@drawable/baseline_check_24" android:gravity="center" />
+</layer-list>

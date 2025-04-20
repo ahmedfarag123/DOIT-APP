@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">DOIT </string>
+
+    <string-array name="The_First_Worke">
+        <item>Noura</item>
+        <item>Mariam</item>
+        <item>Zainab</item>
+        <item>Khadija</item>
+        <item>Safa</item>
+        <item>Kawthar</item>
+
+    </string-array>
+    <string-array name="time">
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+    <string name="sign_in">Sign in</string>
+    <string name="user_name">user name:</string>
+    <string name="password">password:</string>
+    <string name="enter">Enter</string>
+    <string name="_1234567">1234567</string>
+    <string name="enter_but">enter</string>
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="task_home">TASK</string>
+    <string name="sowh_all_employee">Sowh All Employee</string>
+    <string name="logout">LogOut</string>
+    <string name="notifications">Notifications</string>
+    <string name="cleanbathroom">cleanbathroom</string>
+    <string name="wipingsurfaces">wipingsurfaces</string>
+    <string name="garbagecollection">garbagecollection</string>
+    <string name="vacuumfloor">vacuumfloor</string>
+</resources>
