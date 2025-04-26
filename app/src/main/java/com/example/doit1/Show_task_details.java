@@ -27,8 +27,7 @@ public class Show_task_details extends AppCompatActivity {
         img2 = findViewById(R.id.employee_attachment_img2);
         img3 = findViewById(R.id.employee_attachment_img3);
 
-        DatabaseReference ref = FirebaseDatabase.getInstance()
-                .getReference("TasksComplete");
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("TasksComplete");
 
         ref.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override

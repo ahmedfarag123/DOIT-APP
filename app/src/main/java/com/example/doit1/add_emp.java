@@ -94,7 +94,8 @@ public class add_emp extends AppCompatActivity {
         employeeData.put("email", email);
         employeeData.put("mobile", mobile);
         employeeData.put("nationality", nationality);
-        employeeData.put("employeeCode", personalCodeTextView.getText().toString());
+//        employeeData.put("employeeCode", personalCodeTextView.getText().toString());
+        employeeData.put("code", personalCodeTextView.getText().toString());
 
         // Save employee data to Firebase
         databaseReference.child(employeeId).setValue(employeeData)
