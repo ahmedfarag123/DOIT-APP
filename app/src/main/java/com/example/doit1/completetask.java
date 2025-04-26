@@ -106,7 +106,7 @@ public class completetask extends AppCompatActivity {
         btnRecord.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (checkPermissions()) {
+                if (true) {
                     if (mediaRecorder != null) {
                         stopRecording();
 
@@ -172,31 +172,34 @@ public class completetask extends AppCompatActivity {
 
     private void uploadFilesToFirebase(String nTaskId, String taskName, String taskId) {
         uploadFile(imageUri1, taskId, "image1", uri1 -> {
-            String imageUrl1Final = uri1.toString();
+            String imageUrl1 = uri1.toString();
             uploadFile(imageUri2, taskId, "image2", uri2 -> {
-                String imageUrl2Final = uri2.toString();
+                String imageUrl2 = uri2.toString();
                 uploadFile(imageUri3, taskId, "image3", uri3 -> {
                     String imageUrl3 = uri3.toString();
-                    Map<String, Object> newTask = new HashMap<>();
-                    newTask.put("id", nTaskId);
-                    newTask.put("taskId", taskId);
-                    newTask.put("taskName", taskName);
-                    newTask.put("imageUrl", imageUrl1Final);
-                    newTask.put("imageUrl2", imageUrl2Final);
-                    newTask.put("imageUrl3", imageUrl3);
-                    newTask.put("status", true);
 
-                    databaseReference.child(nTaskId).setValue(newTask)
+                    // تخزين البيانات داخل هيكل مرتب في Realtime Database
+                    Map<String, Object> taskMap = new HashMap<>();
+                    taskMap.put("taskId", taskId);
+                    taskMap.put("taskName", taskName);
+                    taskMap.put("status", true);
+
+                    Map<String, Object> imagesMap = new HashMap<>();
+                    imagesMap.put("image1", imageUrl1);
+                    imagesMap.put("image2", imageUrl2);
+                    imagesMap.put("image3", imageUrl3);
+
+                    taskMap.put("images", imagesMap); // تخزين الصور ككائن داخلي
+
+                    databaseReference.child(nTaskId).setValue(taskMap)
                             .addOnCompleteListener(task -> {
                                 if (task.isSuccessful()) {
-                                    Toast.makeText(getApplicationContext(), "Task Assigned Successfully", Toast.LENGTH_SHORT).show();
-                                    Intent intent = new Intent(completetask.this, home_employee.class);
-                                    startActivity(intent);
+                                    Toast.makeText(getApplicationContext(), "Task submitted successfully", Toast.LENGTH_SHORT).show();
+                                    startActivity(new Intent(completetask.this, Show_task_details.class));
                                 } else {
-                                    Toast.makeText(getApplicationContext(), "Failed to Assign Task", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(getApplicationContext(), "Failed to submit task", Toast.LENGTH_SHORT).show();
                                 }
                             });
-
                 });
             });
         });
@@ -243,12 +246,7 @@ public class completetask extends AppCompatActivity {
 
     }
 
-    private boolean checkPermissions() {
-        int recordPermission = ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO);
-        int writePermission = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
-        return recordPermission == PackageManager.PERMISSION_GRANTED &&
-                writePermission == PackageManager.PERMISSION_GRANTED;
-    }
+
 
     private void RequestPermissions() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {

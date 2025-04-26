@@ -13,29 +13,29 @@ public class login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
-        ImageView iconHome = findViewById(R.id.icon_home);
-        ImageView iconSettings = findViewById(R.id.icon_setting);
-        ImageView sign = findViewById(R.id.icon_sign);
+//        ImageView iconHome = findViewById(R.id.icon_home);
+//        ImageView iconSettings = findViewById(R.id.icon_setting);
+//        ImageView sign = findViewById(R.id.icon_sign);
         Button employeeButton = findViewById(R.id.employeeButton);
         Button supervisorButton = findViewById(R.id.supervisorButton);
 
-        iconHome.setOnClickListener(v -> {
-            startActivity(new Intent(getApplicationContext(), home_employee.class));
-            finish();
-
-        });
-        iconSettings.setOnClickListener(v -> {
-            startActivity(new Intent(getApplicationContext(), Employee_profile.class));
-            finish();
-
-
-        });
-        sign.setOnClickListener(v -> {
-            startActivity(new Intent(getApplicationContext(), login_by_code.class));
-            finish();
-
-
-        });
+//        iconHome.setOnClickListener(v -> {
+//            startActivity(new Intent(getApplicationContext(), home_employee.class));
+//            finish();
+//
+//        });
+//        iconSettings.setOnClickListener(v -> {
+//            startActivity(new Intent(getApplicationContext(), Employee_profile.class));
+//            finish();
+//
+//
+//        });
+//        sign.setOnClickListener(v -> {
+//            startActivity(new Intent(getApplicationContext(), login_by_code.class));
+//            finish();
+//
+//
+//        });
 
         employeeButton.setOnClickListener(v -> {
             // Navigate to EmployeeActivity

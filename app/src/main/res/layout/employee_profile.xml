@@ -155,13 +155,13 @@
 
 
     <Button
-        android:id="@+id/btn_edit"
+        android:id="@+id/btn_login"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/user_info"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
-        android:text="Save"
+        android:text="Edit"
         android:backgroundTint="#FFFFFF"
         android:textColor="#003366" />
 
