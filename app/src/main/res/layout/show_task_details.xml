@@ -215,7 +215,7 @@
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/photo2" />
+                        android:src="@android:drawable/ic_menu_gallery" />
 
                     <ImageView
                         android:id="@+id/employee_attachment_img2"
@@ -223,14 +223,14 @@
                         android:layout_height="match_parent"
                         android:layout_marginStart="8dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/p1" />
+                        android:src="@android:drawable/ic_menu_gallery" />
 
                     <ImageView
                         android:id="@+id/employee_attachment_img3"
                         android:layout_width="107dp"
                         android:layout_height="69dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/photo3" />
+                        android:src="@android:drawable/ic_menu_gallery" />
 
                 </LinearLayout>
             </HorizontalScrollView>
@@ -274,18 +274,18 @@
                     <ImageView
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:src="@drawable/photo2" />
+                        android:src="@android:drawable/ic_menu_gallery" />
 
                     <ImageView
                         android:layout_width="107dp"
                         android:layout_height="69dp"
-                        android:src="@drawable/p1" />
+                        android:src="@android:drawable/ic_menu_gallery" />
 
                     <ImageView
                         android:layout_width="99dp"
                         android:layout_height="match_parent"
                         android:layout_marginStart="8dp"
-                        android:src="@drawable/photo3" />
+                        android:src="@android:drawable/ic_menu_gallery" />
                 </LinearLayout>
 
             </HorizontalScrollView>
@@ -312,8 +312,7 @@
                 android:layout_width="330dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="20dp"
-                android:backgroundTint="#568954"
-                android:onClick="actionbtn"
+                android:backgroundTint="#888888"
                 android:text="Complete"
                 android:textColor="#ffffff"
                 android:textStyle="bold" />
@@ -323,3 +322,6 @@
     </LinearLayout>
 
 </ScrollView>
+    <!--                        android:src="@drawable/photo2"-->
+    <!--                        android:src="@drawable/p1"-->
+    <!--                        android:src="@drawable/photo3"-->

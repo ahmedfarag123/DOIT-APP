@@ -1,6 +1,10 @@
 package com.example.doit1;
 
+import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -8,15 +12,13 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.database.*;
 
 public class Show_task_details extends AppCompatActivity {
 
     ImageView img1, img2, img3;
+    Button completeBtn;
+    String taskKey; // سيكون فارغ أول مرة
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,38 +28,93 @@ public class Show_task_details extends AppCompatActivity {
         img1 = findViewById(R.id.employee_attachment_img1);
         img2 = findViewById(R.id.employee_attachment_img2);
         img3 = findViewById(R.id.employee_attachment_img3);
+        completeBtn = findViewById(R.id.CompleteButton);
+
+        // تحقق إن كان هناك taskKey من intent (هذا فقط عند الرجوع من completetask)
+        Intent intent = getIntent();
+        if (intent != null && intent.hasExtra("taskKey")) {
+            taskKey = intent.getStringExtra("taskKey");
+        }
 
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference("TasksComplete");
 
-        ref.addListenerForSingleValueEvent(new ValueEventListener() {
+        // إذا لم يكن هناك مفتاح مرّر، اجلب أول مهمة (أو حدد من الداتابيز المنطق الذي تريده)
+        if (taskKey == null || taskKey.isEmpty()) {
+            ref.limitToFirst(1).addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    if (snapshot.exists()) {
+                        DataSnapshot firstTask = snapshot.getChildren().iterator().next();
+                        taskKey = firstTask.getKey();
+                        loadTask(taskKey);
+                    } else {
+                        Toast.makeText(Show_task_details.this, "لا توجد مهام متاحة!", Toast.LENGTH_SHORT).show();
+                        setViewsForNoTask();
+                    }
+                }
+                @Override public void onCancelled(@NonNull DatabaseError error) {}
+            });
+        } else {
+            loadTask(taskKey);
+        }
+
+        // عندما تضغط صورة وتريد رفع صور (اذهب الى completetask مع ارسال taskKey)
+        View.OnClickListener listener = v -> {
+            if (taskKey != null && !taskKey.isEmpty()) {
+                Intent go = new Intent(Show_task_details.this, completetask.class);
+                go.putExtra("taskKey", taskKey);
+                startActivity(go);
+                finish();  // حتى عند العودة يبدأ من جديد ويتم تحميل الصور الجديدة
+            } else {
+                Toast.makeText(this, "لم يوجد مفتاح مهمة!", Toast.LENGTH_SHORT).show();
+            }
+        };
+
+        img1.setOnClickListener(listener);
+        img2.setOnClickListener(listener);
+        img3.setOnClickListener(listener);
+    }
+
+    private void loadTask(String taskKey) {
+        DatabaseReference taskRef = FirebaseDatabase.getInstance().getReference("TasksComplete").child(taskKey);
+
+        taskRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                String url1 = snapshot.child("imageUrl").getValue(String.class);
+                String url2 = snapshot.child("imageUrl2").getValue(String.class);
+                String url3 = snapshot.child("imageUrl3").getValue(String.class);
 
-                if (snapshot.exists() && snapshot.getChildrenCount() > 0) {
-                    // نحصل على أول مهمة ونستخرج الصور
-                    DataSnapshot firstTask = snapshot.getChildren().iterator().next();
+                // استخدم دالتك لوضع الصور أو البليس هولدر
+//                setImageOrPlaceholder(img1, url1, R.drawable.placeholder); // عدل placeholder لصورتك الافتراضية
+//                setImageOrPlaceholder(img2, url2, R.drawable.placeholder); // حسب صور مشروعك
+//                setImageOrPlaceholder(img3, url3, R.drawable.placeholder);
 
-                    String url1 = firstTask.child("imageUrl").getValue(String.class);
-                    String url2 = firstTask.child("imageUrl2").getValue(String.class);
-                    String url3 = firstTask.child("imageUrl3").getValue(String.class);
+                boolean imagesExist = url1 != null && !url1.isEmpty()
+                        && url2 != null && !url2.isEmpty()
+                        && url3 != null && !url3.isEmpty();
 
-                    // تحميل الصور إذا موجودة
-                    if (url1 != null && !url1.isEmpty())
-                        Glide.with(Show_task_details.this).load(url1).into(img1);
-                    if (url2 != null && !url2.isEmpty())
-                        Glide.with(Show_task_details.this).load(url2).into(img2);
-                    if (url3 != null && !url3.isEmpty())
-                        Glide.with(Show_task_details.this).load(url3).into(img3);
-
+                if (imagesExist) {
+                    completeBtn.setBackgroundTintList(getResources().getColorStateList(android.R.color.holo_green_dark));
+                    completeBtn.setEnabled(true);
                 } else {
-                    Toast.makeText(Show_task_details.this, "لا يوجد بيانات مهام!", Toast.LENGTH_SHORT).show();
+                    completeBtn.setBackgroundTintList(getResources().getColorStateList(android.R.color.darker_gray));
+                    completeBtn.setEnabled(false);
                 }
             }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(Show_task_details.this, "فشل الاتصال بالقاعدة", Toast.LENGTH_SHORT).show();
-            }
+            @Override public void onCancelled(@NonNull DatabaseError error) {}
         });
+    }
+
+    private void setImageOrPlaceholder(ImageView img, String url, int placeholderRes) {
+        if (url != null && !url.isEmpty()) {
+            Glide.with(this).load(url).into(img);
+        } else {
+            img.setImageResource(placeholderRes);
+        }
+    }
+
+    private void setViewsForNoTask() {
+        completeBtn.setEnabled(false);
     }
 }
