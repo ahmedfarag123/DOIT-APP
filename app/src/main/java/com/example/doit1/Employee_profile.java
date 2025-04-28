@@ -63,6 +63,14 @@ public class Employee_profile extends AppCompatActivity {
                     return;
                 }
 
+
+                // تحقق أن رقم الهاتف 10 أرقام فقط
+                if (newMobile.length() != 10 || !newMobile.matches("\\d{10}")) {
+                    Toast.makeText(this, "رقم الهاتف يجب أن يكون 10 أرقام فقط!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+
                 if(empId != null && !empId.isEmpty()) {
                     DatabaseReference empRef = FirebaseDatabase.getInstance()
                             .getReference("Employees").child(empId);

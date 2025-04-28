@@ -1,18 +1,28 @@
 package com.example.doit1;
 
 import android.content.Intent;
-import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
-import com.google.firebase.database.*;
+import com.bumptech.glide.load.DataSource;
+import com.bumptech.glide.load.engine.GlideException;
+import com.bumptech.glide.request.RequestListener;
+import com.bumptech.glide.request.target.Target;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class Show_task_details extends AppCompatActivity {
 
@@ -85,10 +95,11 @@ public class Show_task_details extends AppCompatActivity {
                 String url2 = snapshot.child("imageUrl2").getValue(String.class);
                 String url3 = snapshot.child("imageUrl3").getValue(String.class);
 
-                // استخدم دالتك لوضع الصور أو البليس هولدر
-//                setImageOrPlaceholder(img1, url1, R.drawable.placeholder); // عدل placeholder لصورتك الافتراضية
-//                setImageOrPlaceholder(img2, url2, R.drawable.placeholder); // حسب صور مشروعك
-//                setImageOrPlaceholder(img3, url3, R.drawable.placeholder);
+                Log.d("TASK_DEBUG", "url1=" + url1 + ", url2=" + url2 + ", url3=" + url3);
+
+                loadImageToView(img1, url1, 1);
+                loadImageToView(img2, url2, 2);
+                loadImageToView(img3, url3, 3);
 
                 boolean imagesExist = url1 != null && !url1.isEmpty()
                         && url2 != null && !url2.isEmpty()
@@ -106,11 +117,27 @@ public class Show_task_details extends AppCompatActivity {
         });
     }
 
-    private void setImageOrPlaceholder(ImageView img, String url, int placeholderRes) {
+    private void loadImageToView(ImageView imageView, String url, int index) {
         if (url != null && !url.isEmpty()) {
-            Glide.with(this).load(url).into(img);
+            Glide.with(this)
+                    .load(url)
+                    .placeholder(android.R.drawable.ic_menu_gallery)
+                    .error(android.R.drawable.ic_delete)
+                    .listener(new RequestListener<Drawable>() {
+                        @Override
+                        public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
+                            Log.e("GLIDE", "Image " + index + " Load Failed: " + url, e);
+                            return false;
+                        }
+                        @Override
+                        public boolean onResourceReady(Drawable resource, Object model, Target<Drawable> target, DataSource dataSource, boolean isFirstResource) {
+                            Log.d("GLIDE", "Image " + index + " Loaded successfully!");
+                            return false;
+                        }
+                    })
+                    .into(imageView);
         } else {
-            img.setImageResource(placeholderRes);
+            imageView.setImageResource(android.R.drawable.ic_menu_gallery);
         }
     }
 
